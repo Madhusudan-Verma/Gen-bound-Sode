@@ -16,15 +16,13 @@ Neural Stochastic Differential Equations (Neural SDEs) extend Neural Ordinary Di
 
 The hidden representation evolves according to:
 
-\[
-dH_t = f_\theta(H_t,t)\,dt + \epsilon\,dB_t,
-\]
+$dH_t = f_\theta(H_t,t)dt +\epsilon dB_t$
 
 where:
 
-- \(f_\theta\) is the learnable drift function,
-- \(\epsilon\) controls stochastic noise,
-- \(B_t\) is Brownian motion.
+- $f_\theta$ is the learnable drift function.
+- $\epsilon$ controls stochastic noise.
+- $B_t$ is Brownian motion.
 
 The experiments analyze how stochastic dynamics influence model complexity and generalization.
 
@@ -75,8 +73,8 @@ pip install torch torchvision matplotlib numpy
 ## 1. Clone the Repository
 
 ```bash
-git clone <repository-url>
-cd <repository-folder>
+git clone https://github.com/Madhusudan-Verma/Gen-bound-Sode
+cd Gen-bound-Sode
 ```
 
 ---
@@ -145,19 +143,19 @@ For each experiment:
 
 The Neural SDE model is implemented as:
 
-```python
-dH_t = f_theta(H_t,t) dt + eps dB_t
-```
+
+$dH_t = f_theta(H_t,t) dt + \epsilon dB_t$
+
 
 using Euler-Maruyama discretization.
 
 The drift function consists of multiple learnable neural blocks:
 
-```python
-f_theta(H_t) = sum(theta_i * f_i(H_t))
-```
 
-where each \(f_i\) is a small neural network.
+$f_{\theta}(H_t) = \sum(theta_i * f_i(H_t))$
+
+
+where each $f_i$ is a small neural network.
 
 ---
 
@@ -223,15 +221,9 @@ Observation:
 
 The generalization gap is computed as:
 
-\[
-\text{Gen Gap}
-=
-\mathcal{L}_{test}
--
-\mathcal{L}_{train}
-\]
 
-using cross-entropy classification loss.
+$GenGap = L_{test} - L_{train}$
+
 
 ---
 
@@ -336,16 +328,44 @@ Try:
 
 # References
 
-- Neural Ordinary Differential Equations
-- Neural Stochastic Differential Equations
-- Rademacher Complexity Theory
-- Continuous-Time Deep Learning
-- Stochastic Differential Equations
+This project builds upon foundational work in continuous-depth deep learning, stochastic differential equations, and statistical learning theory. Key references include:
 
-See `references.bib` for full citations.
+1. **Chen et al. (2018)** — *Neural Ordinary Differential Equations*  
+   Introduced Neural ODEs as continuous-depth neural network architectures.
+
+2. **Tzen and Raginsky (2019)** — *Theoretical Perspectives on Deep Generative Models Based on Stochastic Differential Equations*  
+   Established theoretical connections between stochastic differential equations and deep generative learning.
+
+3. **Kidger et al. (2021)** — *Neural Stochastic Differential Equations as Infinite-Dimensional GANs*  
+   Developed practical Neural SDE training frameworks for stochastic sequence modeling.
+
+4. **Øksendal (2003)** — *Stochastic Differential Equations: An Introduction with Applications*  
+   Standard reference for stochastic calculus, Brownian motion, and SDE theory.
+
+5. **Mohri, Rostamizadeh, and Talwalkar (2018)** — *Foundations of Machine Learning*  
+   Reference for Rademacher complexity and statistical learning bounds.
+
+6. **Wainwright (2019)** — *High-Dimensional Statistics: A Non-Asymptotic Viewpoint*  
+   Provides theoretical tools for complexity analysis and generalization theory.
+
+7. **Ledoux and Talagrand (1991)** — *Probability in Banach Spaces*  
+   Classical reference for entropy integrals and concentration inequalities.
+
+For complete citation details, see:
+
+```text
+references.bib
+```
 
 ---
 
 # Author
 
 Neural SDE Generalization Project
+
+Research focus:
+- Neural Stochastic Differential Equations (Neural SDEs)
+- Generalization theory
+- Continuous-time deep learning
+- Stochastic dynamics in machine learning
+- Complexity analysis and Rademacher bounds
