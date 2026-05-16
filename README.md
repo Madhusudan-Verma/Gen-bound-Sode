@@ -351,11 +351,7 @@ This project builds upon foundational work in continuous-depth deep learning, st
 7. **Ledoux and Talagrand (1991)** — *Probability in Banach Spaces*  
    Classical reference for entropy integrals and concentration inequalities.
 
-For complete citation details, see:
 
-```text
-references.bib
-```
 
 ---
 
