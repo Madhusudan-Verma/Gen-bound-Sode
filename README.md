@@ -73,8 +73,8 @@ pip install torch torchvision matplotlib numpy
 ## 1. Clone the Repository
 
 ```bash
-git clone https://github.com/Madhusudan-Verma/Gen-bound-Sode
-cd Gen-bound-Sode
+git clone https://github.com/Madhusudan-Verma/Gen-bound-NSDEs
+cd Gen-bound-NSDEs
 ```
 
 ---
